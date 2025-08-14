@@ -60,6 +60,20 @@ body {
     background-color: #f0f0f0; 
 }
 
+.subscribe-link {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none; /* Hilangkan underline */
+}
+
+.subscribe-link:hover {
+    background-color: #f0f0f0;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
