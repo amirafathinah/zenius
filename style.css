@@ -7,29 +7,65 @@ body {
 }
 
 .navbar {
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-top {
+    background: #FFD700;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: white;
     padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
 }
 
 .logo img {
-    height: 35px;
+    height: 40px;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.sign-in {
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.subscribe {
+    background: white;
+    color: black;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 8px 0;
+    border-top: 1px solid #ddd;
 }
 
 .nav-links li a {
     text-decoration: none;
     color: black;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
+
+.nav-links li a:hover {
+    color: #e6b800;
+}
+
 
 .auth-buttons {
     display: flex;
