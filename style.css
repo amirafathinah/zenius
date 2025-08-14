@@ -52,7 +52,13 @@ body {
 .subscribe {
     background: #FFD700;
     color: black;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
 }
+
 
 .page-title {
     padding: 20px;
