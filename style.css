@@ -46,6 +46,7 @@ body {
 }
 
 .subscribe-btn {
+    display: inline-block;      
     background-color: white;  
     color: black;              
     border-radius: 6px;        
@@ -53,25 +54,12 @@ body {
     font-weight: bold;         
     border: none;              
     cursor: pointer;           
+    text-decoration: none;     
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .subscribe-btn:hover {
     background-color: #f0f0f0; 
-}
-
-.subscribe-link {
-    display: inline-block;
-    background-color: white;
-    color: black;
-    font-weight: bold;
-    padding: 8px 16px;
-    border-radius: 6px;
-    text-decoration: none; /* Hilangkan underline */
-}
-
-.subscribe-link:hover {
-    background-color: #f0f0f0;
 }
 
 .nav-links {
