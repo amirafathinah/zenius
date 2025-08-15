@@ -223,8 +223,40 @@ body {
 }
 
 .progress-bar {
-    height: 8px;
-    background: #ff6600;
+    width: 100%;
+    height: 6px;
+    background-color: #e0e0e0;
+}
+.progress {
+    height: 6px;
+    background-color: #6A1B9A; /* Ungu */
+    transition: width 0.3s ease;
+}
+
+/* Nomor Soal */
+.question-numbers {
+    margin-top: 10px;
+}
+.question-number {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.question-number.active {
+    background-color: #6A1B9A;
+    color: white;
+    border-color: #6A1B9A;
+}
+.question-number:hover {
+    background-color: #8E24AA;
+    color: white;
 }
 
 /* Layout Soal */
@@ -283,31 +315,4 @@ body {
     cursor: not-allowed;
 }
 
-/* Sidebar Nomor Soal */
-.soal-sidebar {
-    flex: 1;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
 
-.nomor-list {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 5px;
-}
-
-.nomor {
-    padding: 5px;
-    border: 1px solid #ccc;
-    background: #f1f1f1;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.nomor.active {
-    background: #ff6600;
-    color: white;
-    font-weight: bold;
-}
