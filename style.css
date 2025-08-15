@@ -164,3 +164,54 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+
+.tes-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+    gap: 30px;
+}
+
+.tes-text {
+    flex: 1;
+}
+
+.tes-text h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.tes-text p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.tes-image {
+    flex: 1;
+    text-align: center;
+}
+
+.tes-image img {
+    width: 80%;
+    max-width: 350px;
+}
+
+.tes-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #FFD700;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.tes-button:hover {
+    background-color: #ffcd00;
+}
