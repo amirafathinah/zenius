@@ -217,52 +217,88 @@ body {
 }
 
 .soal-container {
-    background: white;
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
-    border-radius: 8px;
+  background: white;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.soal-container h2 {
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .progress-container {
   display: flex;
-  align-items: center;   
-  gap: 10px;            
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-
-#progressBar {
-  flex: 1;              
+.progress-bar {
+  flex: 1;
   height: 10px;
-  border-radius: 5px;
   background-color: #ddd;
+  border-radius: 5px;
   overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #FFD700;
+  transition: width 0.3s ease;
 }
 
 #progressText {
   font-weight: bold;
-  margin-top: 8px;
-  text-align: center;
+}
+
+.soal-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.soal-left {
+  flex: 2;
+}
+
+.soal-left h3 {
+  margin-top: 0;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 .option {
-  background-color: #e5e5e5;   
+  background-color: #e5e5e5;
   border-radius: 8px;
   padding: 12px;
-  margin: 8px 0;
   cursor: pointer;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
   transition: background 0.3s ease;
 }
 
 .option:hover {
-  background-color: #d1d1d1;  
+  background-color: #d1d1d1;
 }
 
+/* NOMOR SOAL */
 .question-numbers {
+  flex: 1;
   display: grid;
-  grid-template-columns: repeat(5, 1fr); 
+  grid-template-columns: repeat(2, 1fr);
   gap: 8px;
-  margin-top: 16px;
+  align-content: start;
 }
 
 .question-numbers button {
@@ -280,14 +316,19 @@ body {
   color: #fff;
 }
 
-
+/* NEXT BUTTON */
 .next-btn {
-    background-color: #800080;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    float: right;
+  background-color: #800080;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-top: 20px;
 }
 
+.next-btn:hover {
+  background-color: #5a005a;
+}
