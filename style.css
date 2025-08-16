@@ -401,3 +401,21 @@ body {
   color: white;
 }
 
+.finish-btn {
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  border: none;
+  padding: 12px 0;
+  margin-top: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 14px;
+}
+
+.finish-btn:hover {
+  background-color: #1e7e34;
+}
