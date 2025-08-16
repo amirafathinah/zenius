@@ -245,7 +245,7 @@ body {
   text-align: center;
 }
 
-.option {
+.options {
   background-color: #e5e5e5;   
   border-radius: 8px;
   padding: 12px;
@@ -254,11 +254,10 @@ body {
   transition: background 0.3s ease;
 }
 
-.option:hover {
+.options:hover {
   background-color: #d1d1d1;  
 }
 
-/* === Nomor Soal === */
 .question-numbers {
   display: grid;
   grid-template-columns: repeat(5, 1fr); 
