@@ -347,3 +347,9 @@ body {
 .next-btn:hover {
   background-color: #5a005a;
 }
+
+.numbers button.answered {
+  background-color: #B77CEC; 
+  color: white;
+}
+
