@@ -216,103 +216,76 @@ body {
     background-color: #ffcd00;
 }
 
-.progress-container {
-    background: #ddd;
-    height: 8px;
-    margin-top: 10px;
+.soal-container {
+    background: white;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .progress-bar {
+    background-color: #ddd;
+    height: 8px;
     width: 100%;
-    height: 6px;
-    background-color: #e0e0e0;
-}
-.progress {
-    height: 6px;
-    background-color: #6A1B9A; /* Ungu */
-    transition: width 0.3s ease;
-}
-
-/* Nomor Soal */
-.question-numbers {
-    margin-top: 10px;
-}
-.question-number {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
-    text-align: center;
-    border: 1px solid #ccc;
     border-radius: 4px;
-    margin: 4px;
+}
+
+.progress {
+    height: 8px;
+    width: 0%;
+    background-color: #6b6b6b;
+    border-radius: 4px;
+}
+
+.progress-text {
+    font-size: 12px;
+    margin: 4px 0 20px;
+}
+
+.options button {
+    display: block;
+    width: 100%;
+    background-color: #e5e5e5;
+    border: none;
+    padding: 12px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: all 0.2s ease;
-}
-.question-number.active {
-    background-color: #6A1B9A;
-    color: white;
-    border-color: #6A1B9A;
-}
-.question-number:hover {
-    background-color: #8E24AA;
-    color: white;
 }
 
-/* Layout Soal */
-.soal-container {
-    display: flex;
-    gap: 20px;
-    margin: 20px;
+.options button:hover {
+    background-color: #d4d4d4;
 }
 
-/* Bagian Utama */
-.soal-main {
-    flex: 3;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
-
-.options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(5, 40px);
+    gap: 8px;
     margin: 20px 0;
 }
 
-.option {
-    padding: 10px;
-    border: 1px solid #ccc;
-    background: #f9f9f9;
-    cursor: pointer;
-    text-align: left;
-    border-radius: 4px;
-}
-
-.option:hover {
-    background: #ffefcc;
-}
-
-/* Navigasi Tombol */
-.navigation {
-    display: flex;
-    justify-content: space-between;
-}
-
-.prev, .next {
-    padding: 8px 15px;
+.numbers button {
+    background: #e5e5e5;
     border: none;
-    background: #ff6600;
-    color: white;
     border-radius: 4px;
+    padding: 10px;
     cursor: pointer;
 }
 
-.prev:disabled {
-    background: #ccc;
-    cursor: not-allowed;
+.numbers button.active {
+    background: black;
+    color: white;
 }
 
-
+.next-btn {
+    background-color: #800080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    float: right;
+}
