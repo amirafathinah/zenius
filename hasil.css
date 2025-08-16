@@ -1,32 +1,38 @@
 .hasil-container {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  font-family: Arial, sans-serif;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-family: inherit; 
 }
 
 .hasil-header h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
+  margin-bottom: 24px;
+  font-size: 28px;
   font-weight: bold;
-  color: #333;
+  color: #222;
+  text-align: center;
 }
 
 .hasil-flex {
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .hasil-left {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hasil-left img {
-  width: 100%;
-  border-radius: 8px;
+  width: 90%;
+  max-width: 350px;
+  border-radius: 12px;
 }
 
 .hasil-right {
@@ -34,57 +40,66 @@
 }
 
 .hasil-right h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #444;
+  font-size: 22px;
+  margin: 20px 0 10px;
+  color: #333;
 }
 
 .progress-item {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .progress-label {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 4px;
-  font-size: 14px;
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .progress-bar {
-  background: #eee;
+  background: #f0f0f0;
   border-radius: 20px;
   overflow: hidden;
-  height: 12px;
+  height: 14px;
 }
 
 .progress-fill {
   height: 100%;
-  background: #fbc02d;
-  transition: width 0.3s;
+  background: linear-gradient(90deg, #ffb300, #ff9800);
+  transition: width 0.4s ease;
 }
 
 .role-card {
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin: 15px 0;
-  border-radius: 10px;
+  border: 1px solid #eee;
+  padding: 18px;
+  margin: 20px 0;
+  border-radius: 12px;
   background: #fafafa;
+  transition: transform 0.2s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .role-card h4 {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   color: #222;
+  font-size: 18px;
 }
 
 .back-home {
   display: inline-block;
   margin-top: 20px;
-  padding: 12px 20px;
-  border-radius: 8px;
+  padding: 12px 22px;
+  border-radius: 10px;
   background: #007bff;
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: background 0.3s ease;
 }
 
 .back-home:hover {
