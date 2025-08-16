@@ -1,97 +1,120 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tes Minat & Bakat</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tes Minat & Bakat</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav class="navbar">
-    <div class="navbar-top">
-        <div class="logo">
-            <img src="zenius.main.png" alt="Zenius Logo">
-        </div>
-        <div class="auth-buttons">
-            <button class="sign-in">Sign In</button>
-            <a href="https://www.youtube.com/@ZeniusEducation" class="subscribe-btn" target="_blank">
-                Subscribe
-            </a>
-        </div>
+  <div class="navbar-top">
+    <div class="logo">
+      <img src="zenius.main.png" alt="Zenius Logo">
     </div>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="tesminat.html" class="active">Tes Minat & Bakat</a></li>
-        <li><a href="#">Langkah Belajar</a></li>
-        <li><a href="#">Zenius Progress</a></li>
-    </ul>
+    <div class="auth-buttons">
+      <button class="sign-in">Sign In</button>
+      <a href="https://www.youtube.com/@ZeniusEducation" class="subscribe-btn" target="_blank">
+        Subscribe
+      </a>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="tesminat.html" class="active">Tes Minat & Bakat</a></li>
+    <li><a href="#">Langkah Belajar</a></li>
+    <li><a href="#">Zenius Progress</a></li>
+  </ul>
 </nav>
 
 <main class="soal-container">
-    <h2>Tes Minat & Bakat</h2>
-    <div class="progress-container">
-  <div class="progress-bar">
-    <div id="progressFill" class="progress-fill" style="width: 0%;"></div>
+  <h2>Tes Minat & Bakat</h2>
+  <div class="progress-container">
+    <div class="progress-bar">
+      <div id="progressFill" class="progress-fill" style="width: 0%;"></div>
+    </div>
+    <span id="progressText">0%</span>
   </div>
-  <span id="progressText">0%</span>
-</div>
 
-    <div class="soal-content">
-      <div class="soal-left">
-        <h3>Pertanyaan 1</h3>
-        <p>Dari pilihan berikut, aktivitas mana yang paling menarik buatmu?</p>
+  <div class="soal-content">
+    <div class="soal-left">
+      <h3>Pertanyaan 1</h3>
+      <p>Dari pilihan berikut, aktivitas mana yang paling menarik buatmu?</p>
 
-        <div class="options">
-          <button class="option">Menulis artikel atau naskah</button>
-          <button class="option">Mengatur strategi bisnis</button>
-          <button class="option">Menganalisis data atau grafik</button>
-          <button class="option">Membuat ilustrasi atau desain</button>
-          <button class="option">Membantu orang lain memecahkan masalah pribadi</button>
-        </div>
-           <a href="soal2.html" class="next-btn">Next</a>
+      <div class="options">
+        <button class="option">Menulis artikel atau naskah</button>
+        <button class="option">Mengatur strategi bisnis</button>
+        <button class="option">Menganalisis data atau grafik</button>
+        <button class="option">Membuat ilustrasi atau desain</button>
+        <button class="option">Membantu orang lain memecahkan masalah pribadi</button>
       </div>
+      <a id="nextBtn" href="soal2.html" class="next-btn" style="pointer-events:none; opacity:0.5;">Next</a>
+    </div>
 
-      <div class="quiz-right">
-        <div class="numbers">
-            <button class="active">1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>10</button>
-            <button>11</button>
-            <button>12</button>
-            <button>13</button>
-            <button>14</button>
-            <button>15</button>
-            <button>16</button>
-            <button>17</button>
-            <button>18</button>
-            <button>19</button>
-            <button>20</button>
-        <div>
-        </div>
-  </main>
+    <div class="quiz-right">
+      <div class="numbers">
+        <button id="num1">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>10</button>
+        <button>11</button>
+        <button>12</button>
+        <button>13</button>
+        <button>14</button>
+        <button>15</button>
+        <button>16</button>
+        <button>17</button>
+        <button>18</button>
+        <button>19</button>
+        <button>20</button>
+      </div>
+    </div>
+  </div>
+</main>
 
-            <script>
-  const targetProgress = 5; 
+<script>
+  const options = document.querySelectorAll(".option");
+  const progressFill = document.getElementById("progressFill");
+  const progressText = document.getElementById("progressText");
+  const nextBtn = document.getElementById("nextBtn");
+  const num1 = document.getElementById("num1");
 
-  document.querySelectorAll(".option").forEach(option => {
-    option.addEventListener("click", function() {
-      document.querySelectorAll(".option").forEach(btn => btn.classList.remove("selected"));
-      this.classList.add("selected");
+  options.forEach(option => {
+    option.addEventListener("click", () => {
+        
+      options.forEach(btn => btn.classList.remove("selected"));
+      option.classList.add("selected");
 
-      document.getElementById("progressFill").style.width = targetProgress + "%";
-      document.getElementById("progressText").textContent = targetProgress + "%";
+      localStorage.setItem("progress", 5);
+      localStorage.setItem("answered1", "true");
+
+      progressFill.style.width = "5%";
+      progressText.textContent = "5%";
+
+      nextBtn.style.pointerEvents = "auto";
+      nextBtn.style.opacity = "1";
+
+      num1.classList.add("answered");
     });
   });
+
+  let savedProgress = localStorage.getItem("progress") || 0;
+  progressFill.style.width = savedProgress + "%";
+  progressText.textContent = savedProgress + "%";
+
+  if(localStorage.getItem("answered1")){
+    num1.classList.add("answered");
+    nextBtn.style.pointerEvents = "auto";
+    nextBtn.style.opacity = "1";
+  }
 </script>
 
-            
 </body>
 </html>
