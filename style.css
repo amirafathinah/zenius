@@ -292,13 +292,11 @@ body {
   background-color: #d1d1d1;
 }
 
-/* NOMOR SOAL */
 .question-numbers {
-  flex: 1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-  align-content: start;
+  grid-template-rows: repeat(5, auto);
+  grid-auto-flow: column;
+  gap: 10px;
 }
 
 .question-numbers button {
