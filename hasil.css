@@ -12,7 +12,7 @@
   margin-bottom: 24px;
   font-size: 28px;
   font-weight: bold;
-  color: #222;
+  color: #500a8d;
   text-align: center;
 }
 
@@ -75,7 +75,7 @@
   padding: 18px;
   margin: 20px 0;
   border-radius: 12px;
-  background: #fafafa;
+  background: #500a8d;
   transition: transform 0.2s ease;
 }
 
@@ -95,7 +95,7 @@
   margin-top: 20px;
   padding: 12px 22px;
   border-radius: 10px;
-  background: #007bff;
+  background: #500a8d;
   color: #fff;
   text-decoration: none;
   font-weight: 600;
