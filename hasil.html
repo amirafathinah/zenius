@@ -4,130 +4,136 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hasil Tes Minat & Bakat</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="hasil.css">
 </head>
 <body>
-
-<nav class="navbar">
-  <div class="navbar-top">
-    <div class="logo">
-      <img src="zenius.main.png" alt="Zenius Logo">
-    </div>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Zenius Education</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Tes Minat & Bakat</a>
+      <a href="#">Langkah Belajar</a>
+      <a href="#">Career-Talk</a>
+      <a href="#">Zenius Progress</a>
+    </nav>
     <div class="auth-buttons">
-      <button class="sign-in">Sign In</button>
-      <a href="https://www.youtube.com/@ZeniusEducation" class="subscribe-btn" target="_blank">
-        Subscribe
-      </a>
+      <button class="btn-outline">Sign In</button>
+      <button class="btn-solid">Subscribe</button>
     </div>
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="tesminat.html" class="active">Tes Minat & Bakat</a></li>
-    <li><a href="#">Langkah Belajar</a></li>
-    <li><a href="#">Zenius Progress</a></li>
-  </ul>
-</nav>
+  </header>
 
-  <main class="hasil-container">
-    <div class="hasil-header">
-      <h2>Hasil Tes Minat & Bakat</h2>
-    </div>
+  <!-- Content -->
+  <main class="container">
+    <h1>Hasil Tes Minat & Bakat</h1>
 
-    <div class="hasil-illustration">
-      <img src="hasil-illustration.png" alt="Ilustrasi Hasil Tes">
-    </div>
-
-    <section class="roadmap">
-      <h3>Roadmap Belajar yang Direkomendasikan</h3>
-      <div class="roadmap-cards">
-        <div class="role-card">
-          <h4>Data Analyst</h4>
-          <p>Mengumpulkan, mengolah, dan menganalisis data untuk menemukan insight serta mendukung pengambilan keputusan.</p>
-          <a href="#" class="btn-role">Mulai Jalur Belajar Data Analyst</a>
-        </div>
-
-        <div class="role-card">
-          <h4>Business Analyst</h4>
-          <p>Menganalisis kebutuhan bisnis dan memberikan rekomendasi terbaik untuk kebutuhan sistem.</p>
-          <a href="#" class="btn-role">Mulai Jalur Belajar Business Analyst</a>
-        </div>
-
-        <div class="role-card">
-          <h4>Data Engineer</h4>
-          <p>Membangun, menyiapkan, dan memelihara infrastruktur data agar siap digunakan oleh analis dan data scientist.</p>
-          <a href="#" class="btn-role">Mulai Jalur Belajar Data Engineer</a>
-        </div>
+    <section class="intro">
+      <div class="illustration">
+        <img src="https://img.icons8.com/external-flat-juicy-fish/344/external-analysis-business-flat-flat-juicy-fish.png" alt="Ilustrasi">
+      </div>
+      <div class="intro-text">
+        <p><strong>Hai, Amira!</strong></p>
+        <p>
+          Berdasarkan hasil tes kamu, kamu memiliki minat kuat di bidang 
+          <span class="highlight">Investigatif</span>, 
+          <span class="highlight">Konvensional</span>, dan 
+          <span class="highlight">Realistik</span>.
+        </p>
+        <p>
+          Kamu cocok di jalur karier yang fokus pada data, analisis, dan pemecahan masalah seperti: 
+          <span class="career">Data Analyst</span>, 
+          <span class="career">Business Analyst</span>, atau 
+          <span class="career">Data Engineer</span>.
+        </p>
       </div>
     </section>
 
-    <div class="hasil-right">
-      <h3>Hai, Amira!</h3>
-      <p>
-        Berdasarkan hasil tes kamu, kamu memiliki minat kuat di bidang 
-        <span class="highlight">Investigatif</span>, 
-        <span class="highlight">Konvensional</span>, 
-        dan <span class="highlight">Realistik</span>.
-      </p>
-      <p>
-        Kamu cocok di jalur karir yang fokus pada data, analisis, dan pemecahan masalah seperti: 
-        <b>Data Analyst, Business Analyst, atau Data Engineer.</b>
-      </p>
+    <!-- Peta Minat -->
+    <section class="riasec-section">
+      <h2>Peta Minat Kamu (RIASEC)</h2>
 
-      <h3>Peta Minat Kamu (RIASEC)</h3>
-      <div class="progress-list">
-        <div class="progress-item">
-          <span>Realistik</span>
-          <div class="progress-bar"><div class="fill" style="width: 67%"></div></div>
-          <span>67%</span>
-        </div>
-        <div class="progress-item">
-          <span>Investigatif</span>
-          <div class="progress-bar"><div class="fill" style="width: 90%"></div></div>
-          <span>90%</span>
-        </div>
-        <div class="progress-item">
-          <span>Artistik</span>
-          <div class="progress-bar"><div class="fill" style="width: 40%"></div></div>
-          <span>40%</span>
-        </div>
-        <div class="progress-item">
-          <span>Sosial</span>
-          <div class="progress-bar"><div class="fill" style="width: 42%"></div></div>
-          <span>42%</span>
-        </div>
-        <div class="progress-item">
-          <span>Enterprising</span>
-          <div class="progress-bar"><div class="fill" style="width: 50%"></div></div>
-          <span>50%</span>
-        </div>
-        <div class="progress-item">
-          <span>Konvensional</span>
-          <div class="progress-bar"><div class="fill" style="width: 75%"></div></div>
-          <span>75%</span>
-        </div>
+      <div class="progress-item">
+        <span class="riasec realistik">Realistik</span>
+        <div class="progress-bar"><div class="fill" style="width: 67%"></div></div>
+        <span>67%</span>
       </div>
 
-      <h3>Minat dominan kamu: Investigatif (90)</h3>
+      <div class="progress-item">
+        <span class="riasec investigatif">Investigatif</span>
+        <div class="progress-bar"><div class="fill" style="width: 90%"></div></div>
+        <span>90%</span>
+      </div>
+
+      <div class="progress-item">
+        <span class="riasec artistik">Artistik</span>
+        <div class="progress-bar"><div class="fill" style="width: 40%"></div></div>
+        <span>40%</span>
+      </div>
+
+      <div class="progress-item">
+        <span class="riasec sosial">Sosial</span>
+        <div class="progress-bar"><div class="fill" style="width: 42%"></div></div>
+        <span>42%</span>
+      </div>
+
+      <div class="progress-item">
+        <span class="riasec enterprising">Enterprising</span>
+        <div class="progress-bar"><div class="fill" style="width: 50%"></div></div>
+        <span>50%</span>
+      </div>
+
+      <div class="progress-item">
+        <span class="riasec konvensional">Konvensional</span>
+        <div class="progress-bar"><div class="fill" style="width: 75%"></div></div>
+        <span>75%</span>
+      </div>
+    </section>
+
+    <!-- Minat dominan -->
+    <section class="dominant">
+      <h3>Minat dominan kamu: <span class="highlight">Investigatif (90)</span></h3>
       <p>
         Kamu cenderung menikmati mencari pola, memecahkan masalah dengan data, dan berpikir logis.
       </p>
+    </section>
 
+    <!-- Gaya Belajar -->
+    <section class="learning-style">
       <h3>Gaya Belajar & Lingkungan Ideal</h3>
       <ul>
-        <li><b>Analytical Learning:</b> suka data, grafik, dan struktur logika</li>
-        <li><b>Learning by Doing:</b> senang belajar lewat studi kasus dan latihan langsung (misal: Google Sheets, SQL, Python)</li>
+        <li><strong>Analytical Learning:</strong> suka data, grafik, dan struktur logika</li>
+        <li><strong>Learning by Doing:</strong> senang belajar lewat studi kasus dan latihan langsung (misal: Google Sheets, SQL, Python)</li>
       </ul>
-
-      <p><b>Lingkungan kerja idealmu:</b></p>
+      <p>Lingkungan kerja idealmu:</p>
       <ul>
         <li>Tenang dan terstruktur</li>
         <li>Ada tantangan logika/data setiap hari</li>
         <li>Diberi waktu untuk berpikir dan menganalisis</li>
       </ul>
+    </section>
 
-      <a href="index.html" class="back-home">Kembali ke Home</a>
-    </div>
+    <!-- Roadmap -->
+    <section class="roadmap">
+      <h2>Roadmap Belajar yang Direkomendasikan</h2>
+
+      <div class="roadmap-card">
+        <h4>Data Analyst</h4>
+        <p>Mengumpulkan, mengolah, dan menganalisis data untuk menemukan insight serta mendukung pengambilan keputusan.</p>
+        <button class="btn-solid">Mulai Jalur Belajar Data Analyst</button>
+      </div>
+
+      <div class="roadmap-card">
+        <h4>Business Analyst</h4>
+        <p>Menganalisis data untuk memahami kebutuhan bisnis & kepuasan untuk kebutuhan klien.</p>
+        <button class="btn-solid">Mulai Jalur Belajar Business Analyst</button>
+      </div>
+
+      <div class="roadmap-card">
+        <h4>Data Engineer</h4>
+        <p>Membangun menyiapkan dan memelihara infrastruktur data agar siap digunakan oleh data scientist/analyst.</p>
+        <button class="btn-solid">Mulai Jalur Belajar Data Engineer</button>
+      </div>
+    </section>
   </main>
 </body>
 </html>
