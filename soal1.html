@@ -1,115 +1,97 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tes Minat & Bakat</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tes Minat & Bakat</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav class="navbar">
-  <div class="navbar-top">
-    <div class="logo">
-      <img src="zenius.main.png" alt="Zenius Logo">
+    <div class="navbar-top">
+        <div class="logo">
+            <img src="zenius.main.png" alt="Zenius Logo">
+        </div>
+        <div class="auth-buttons">
+            <button class="sign-in">Sign In</button>
+            <a href="https://www.youtube.com/@ZeniusEducation" class="subscribe-btn" target="_blank">
+                Subscribe
+            </a>
+        </div>
     </div>
-    <div class="auth-buttons">
-      <button class="sign-in">Sign In</button>
-      <a href="https://www.youtube.com/@ZeniusEducation" class="subscribe-btn" target="_blank">
-        Subscribe
-      </a>
-    </div>
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="tesminat.html" class="active">Tes Minat & Bakat</a></li>
-    <li><a href="#">Langkah Belajar</a></li>
-    <li><a href="#">Zenius Progress</a></li>
-  </ul>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tesminat.html" class="active">Tes Minat & Bakat</a></li>
+        <li><a href="#">Langkah Belajar</a></li>
+        <li><a href="#">Zenius Progress</a></li>
+    </ul>
 </nav>
 
 <main class="soal-container">
-  <h2>Tes Minat & Bakat</h2>
-  <div class="progress-container">
-    <div class="progress-bar">
-      <div id="progressFill" class="progress-fill" style="width: 0%;"></div>
-    </div>
-    <span id="progressText">0%</span>
+    <h2>Tes Minat & Bakat</h2>
+    <div class="progress-container">
+  <div class="progress-bar">
+    <div id="progressFill" class="progress-fill" style="width: 0%;"></div>
   </div>
+  <span id="progressText">0%</span>
+</div>
 
-  <div class="soal-content">
-    <div class="soal-left">
-      <h3>Pertanyaan 1</h3>
-      <p>Dari pilihan berikut, aktivitas mana yang paling menarik buatmu?</p>
+    <div class="soal-content">
+      <div class="soal-left">
+        <h3>Pertanyaan 1</h3>
+        <p>Dari pilihan berikut, aktivitas mana yang paling menarik buatmu?</p>
 
-      <div class="options">
-        <button class="option">Menulis artikel atau naskah</button>
-        <button class="option">Mengatur strategi bisnis</button>
-        <button class="option">Menganalisis data atau grafik</button>
-        <button class="option">Membuat ilustrasi atau desain</button>
-        <button class="option">Membantu orang lain memecahkan masalah pribadi</button>
+        <div class="options">
+          <button class="option">Menulis artikel atau naskah</button>
+          <button class="option">Mengatur strategi bisnis</button>
+          <button class="option">Menganalisis data atau grafik</button>
+          <button class="option">Membuat ilustrasi atau desain</button>
+          <button class="option">Membantu orang lain memecahkan masalah pribadi</button>
+        </div>
+           <a href="soal2.html" class="next-btn">Next</a>
       </div>
-      <button class="prev-btn">Previous</button>
-  <a href="soal2.html" class="next-btn">Next</a>
-    </div>
 
-    
-    <div class="quiz-right">
-      <div class="numbers">
-        <button id="num1">1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>10</button>
-        <button>11</button>
-        <button>12</button>
-        <button>13</button>
-        <button>14</button>
-        <button>15</button>
-        <button>16</button>
-        <button>17</button>
-        <button>18</button>
-        <button>19</button>
-        <button>20</button>
-      </div>
-    </div>
-  </div>
-</main>
+      <div class="quiz-right">
+        <div class="numbers">
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>10</button>
+            <button>11</button>
+            <button>12</button>
+            <button>13</button>
+            <button>14</button>
+            <button>15</button>
+            <button>16</button>
+            <button>17</button>
+            <button>18</button>
+            <button>19</button>
+            <button>20</button>
+        <div>
+        </div>
+  </main>
 
-<script>
-    let progress = parseInt(localStorage.getItem("progress")) || 0;
-    let answered = JSON.parse(localStorage.getItem("answered")) || [];
+            <script>
+  const targetProgress = 5; 
 
-    document.getElementById("progressFill").style.width = progress + "%";
-    document.getElementById("progressText").textContent = progress + "%";
+  document.querySelectorAll(".option").forEach(option => {
+    option.addEventListener("click", function() {
+      document.querySelectorAll(".option").forEach(btn => btn.classList.remove("selected"));
+      this.classList.add("selected");
 
-    answered.forEach(num => {
-      document.querySelectorAll(".quiz-right .num")[num-1]?.classList.add("answered");
+      document.getElementById("progressFill").style.width = targetProgress + "%";
+      document.getElementById("progressText").textContent = targetProgress + "%";
     });
+  });
+</script>
 
-    document.querySelectorAll(".option").forEach(option => {
-      option.addEventListener("click", function() {
-        document.querySelectorAll(".option").forEach(btn => btn.classList.remove("selected"));
-        this.classList.add("selected");
-
-        let currentSoal = 1;
-        if (!answered.includes(currentSoal)) {
-          progress += 5;
-          answered.push(currentSoal);
-          localStorage.setItem("progress", progress);
-          localStorage.setItem("answered", JSON.stringify(answered));
-        }
-
-        document.getElementById("progressFill").style.width = progress + "%";
-        document.getElementById("progressText").textContent = progress + "%";
-        document.querySelectorAll(".quiz-right .num")[currentSoal-1].classList.add("answered");
-      });
-    });
-  </script>
+            
 </body>
 </html>
