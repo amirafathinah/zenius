@@ -332,24 +332,25 @@ body {
 }
 
 .next-btn {
-  background-color: #800080;
+  display: inline-block;     
+  background-color: #6a0dad; 
   color: white;
-  padding: 10px 30px;
   border: none;
-  border-radius: 6px;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
-  display: block;
-  margin-left: auto;   
-  margin-top: 25px;
-  font-weight: 600;
+  transition: 0.3s;
 }
 
 .next-btn:hover {
-  background-color: #5a005a;
+  background-color: #500a8d;
 }
 
+
 .numbers button.answered {
-  background-color: #B77CEC; 
+  background-color: #6a0dad; 
   color: white;
 }
 
