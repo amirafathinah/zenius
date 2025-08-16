@@ -292,6 +292,11 @@ body {
   background-color: #d1d1d1;
 }
 
+.option.selected {
+  background-color: #FFD700;
+  font-weight: 600;
+}
+
 .quiz-content {
   display: flex;
   align-items: flex-start;
