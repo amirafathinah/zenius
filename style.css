@@ -302,6 +302,7 @@ body {
   align-items: flex-start;
 }
 
+ <!-- Tombol
 .quiz-right {
     flex: 1;
     display: flex;
@@ -310,7 +311,8 @@ body {
     gap: 20px;
     margin-left: 40px;
     margin-top: 20px;
-}
+} 
+-->
 
 .numbers {
     display: grid;
@@ -331,26 +333,70 @@ body {
     color: white;
 }
 
-.next-btn {
-  display: inline-block;     
-  background-color: #6a0dad; 
-  color: white;
+.next-btn, .prev-btn {
+  display: inline-block;
   border: none;
   padding: 10px 20px;
   margin-top: 15px;
+  margin-right: 10px;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  text-decoration: none;
+  text-align: center;
+}
+
+.next-btn {
+  background-color: #6a0dad;
+  color: #fff;
 }
 
 .next-btn:hover {
   background-color: #500a8d;
 }
 
+.prev-btn {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
 
+.prev-btn.active {
+  background-color: #6a0dad;
+  color: #fff;
+  cursor: pointer;
+}
+
+.prev-btn.active:hover {
+  background-color: #500a8d;
+}
 .numbers button.answered {
   background-color: #6a0dad; 
+  color: white;
+}
+
+.quiz-right {
+  margin-top: 20px;
+}
+
+.quiz-right .num {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 3px;
+  background: #e0e0e0;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+}
+
+.quiz-right .active {
+  background: #b388ff;
+  color: white;
+}
+
+.quiz-right .answered {
+  background: #4caf50;
   color: white;
 }
 
