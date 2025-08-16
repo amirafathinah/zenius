@@ -29,85 +29,96 @@
   </ul>
 </nav>
 
-  <main class="hasil-container">
-    <h2>Hasil Tes Minat & Bakat Kamu 🎉</h2>
+ <main class="hasil-container">
+  <div class="hasil-header">
+    <h2>Hasil Tes Minat & Bakat</h2>
+  </div>
 
-    <div class="hasil-flex">
-      <!-- KIRI: ilustrasi -->
-      <div class="hasil-left">
-        <img src="hasil-illustration.png" alt="Hasil Tes">
-      </div>
-
-      <!-- KANAN: info utama -->
-      <div class="hasil-info">
-        <h3>Hai, Amira!</h3>
-        <p>Berdasarkan jawabanmu, berikut hasil tes minat & bakat kamu:</p>
-
-        <h3>Peta Minat Kamu (RIASEC)</h3>
-        <div class="progress-group">
-          <p>Realistik (R)</p>
-          <div class="progress-bar"><div style="width: 50%"></div></div>
-          <span>50%</span>
-        </div>
-        <div class="progress-group">
-          <p>Investigatif (I)</p>
-          <div class="progress-bar"><div style="width: 80%"></div></div>
-          <span>80%</span>
-        </div>
-        <div class="progress-group">
-          <p>Artistik (A)</p>
-          <div class="progress-bar"><div style="width: 60%"></div></div>
-          <span>60%</span>
-        </div>
-        <div class="progress-group">
-          <p>Sosial (S)</p>
-          <div class="progress-bar"><div style="width: 75%"></div></div>
-          <span>75%</span>
-        </div>
-        <div class="progress-group">
-          <p>Enterprising (E)</p>
-          <div class="progress-bar"><div style="width: 40%"></div></div>
-          <span>40%</span>
-        </div>
-        <div class="progress-group">
-          <p>Konvensional (C)</p>
-          <div class="progress-bar"><div style="width: 55%"></div></div>
-          <span>55%</span>
-        </div>
-
-        <h3>Minat dominan kamu adalah <span class="highlight">Investigatif & Sosial</span></h3>
-        <p>Kamu cenderung suka memecahkan masalah, menganalisis, sekaligus punya kepedulian membantu orang lain. Cocok untuk jalur belajar yang banyak penelitian, logika, dan interaksi sosial.</p>
-
-        <h3>Gaya Belajar & Lingkungan Ideal</h3>
-        <ul>
-          <li>Suka belajar dengan diskusi & eksperimen</li>
-          <li>Nyaman dalam tim & kolaborasi</li>
-          <li>Menyukai data, riset, & pemecahan masalah</li>
-        </ul>
-      </div>
-
-      <!-- FULL BAWAH: rekomendasi jalur belajar -->
-      <div class="hasil-rekomendasi">
-        <h3>Rekomendasi Jalur Belajar</h3>
-
-        <div class="role-card">
-          <h4>Data Science</h4>
-          <p>Mendalami analisis data, machine learning, dan pengolahan informasi.</p>
-        </div>
-        <div class="role-card">
-          <h4>Psikologi</h4>
-          <p>Belajar memahami perilaku manusia, konseling, dan riset sosial.</p>
-        </div>
-        <div class="role-card">
-          <h4>Bioteknologi</h4>
-          <p>Menggabungkan biologi & teknologi untuk riset & inovasi.</p>
-        </div>
-
-        <a href="index.html" class="back-home">Kembali ke Home</a>
-      </div>
+  <div class="hasil-flex">
+    <div class="hasil-left">
+      <img src="hasil-illustration.png" alt="Ilustrasi Hasil Tes">
     </div>
-  </main>
 
+    <div class="hasil-right">
+      <h3>Hai, Amira!</h3>
+      <p>
+        Berdasarkan hasil tes kamu, kamu memiliki minat kuat di bidang 
+        <b>Investigatif, Konvensional, dan Realistik.</b>
+      </p>
+      <p>
+        Kamu cocok di jalur karir yang fokus pada data, analisis, dan pemecahan masalah seperti: 
+        <b>Data Analyst, Business Analyst, atau Data Engineer.</b>
+      </p>
+
+      <h3>Peta Minat Kamu (RIASEC)</h3>
+
+      <div class="progress-item">
+        <div class="progress-label"><span>Realistik</span><span>67%</span></div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 67%;"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-label"><span>Investigatif</span><span>90%</span></div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-label"><span>Artistik</span><span>40%</span></div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 40%;"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-label"><span>Sosial</span><span>42%</span></div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 42%;"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-label"><span>Enterprising</span><span>50%</span></div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 50%;"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-label"><span>Konvensional</span><span>75%</span></div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 75%;"></div></div>
+      </div>
+
+      <h3>Minat dominan kamu: <span style="color:#007bff;">Investigatif (90)</span></h3>
+      <p>
+        Kamu cenderung menikmati mencari pola, memecahkan masalah dengan data, dan berpikir logis.
+      </p>
+
+      <h3>Gaya Belajar & Lingkungan Ideal</h3>
+      <ul>
+        <li><b>Analytical Learning:</b> suka data, grafik, dan struktur logika</li>
+        <li><b>Learning by Doing:</b> senang belajar lewat studi kasus dan latihan langsung (misal: Google Sheets, SQL, Python)</li>
+      </ul>
+
+      <p><b>Lingkungan kerja idealmu:</b></p>
+      <ul>
+        <li>Tenang dan terstruktur</li>
+        <li>Ada tantangan logika/data setiap hari</li>
+        <li>Diberi waktu untuk berpikir dan menganalisis</li>
+      </ul>
+
+      <h3>Rekomendasi Jalur Belajar</h3>
+
+      <div class="role-card">
+        <h4>Data Analyst</h4>
+        <p>Mengumpulkan, mengolah, dan menganalisis data untuk menemukan insight serta mendukung pengambilan keputusan.</p>
+        <a href="#" class="back-home">Mulai Jalur Belajar Data Analyst</a>
+      </div>
+
+      <div class="role-card">
+        <h4>Business Analyst</h4>
+        <p>Menganalisis kebutuhan bisnis dan memberikan rekomendasi terbaik untuk kebutuhan sistem.</p>
+        <a href="#" class="back-home">Mulai Jalur Belajar Business Analyst</a>
+      </div>
+
+      <div class="role-card">
+        <h4>Data Engineer</h4>
+        <p>Membangun, menyiapkan, dan memelihara infrastruktur data agar siap digunakan oleh analis dan data scientist.</p>
+        <a href="#" class="back-home">Mulai Jalur Belajar Data Engineer</a>
+      </div>
+
+      <a href="index.html" class="back-home">Kembali ke Home</a>
+    </div>
+  </div>
+</main>
 
 </body>
 </html>
