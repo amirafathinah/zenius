@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tes Minat & Bakat - Soal 20</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-top">
+    <div class="logo">
+      <img src="zenius.main.png" alt="Zenius Logo">
+    </div>
+    <div class="auth-buttons">
+      <button class="sign-in">Sign In</button>
+      <a href="https://www.youtube.com/@ZeniusEducation" class="subscribe-btn" target="_blank">
+        Subscribe
+      </a>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="tesminat.html" class="active">Tes Minat & Bakat</a></li>
+    <li><a href="#">Langkah Belajar</a></li>
+    <li><a href="#">Zenius Progress</a></li>
+  </ul>
+</nav>
+
+<main class="soal-container">
+  <h2>Tes Minat & Bakat</h2>
+  
+  <!-- Progress -->
+  <div class="progress-container">
+    <div class="progress-bar">
+      <div id="progressFill" class="progress-fill" style="width: 100%;"></div>
+    </div>
+    <span id="progressText">100%</span>
+  </div>
+
+  <div class="soal-content">
+    <div class="soal-left">
+      <h3>Pertanyaan 20</h3>
+      <p>Dari pilihan berikut, mana yang paling menggambarkan kepribadianmu?</p>
+
+      <div class="options">
+        <button class="option">Kreatif dan suka bereksperimen</button>
+        <button class="option">Analitis dan logis</button>
+        <button class="option">Terorganisir dan disiplin</button>
+        <button class="option">Empatik dan mudah bergaul</button>
+        <button class="option">Berani ambil risiko</button>
+      </div>
+
+      <div class="navigation-btns">
+        <a href="soal19.html" class="prev-btn active">Previous</a>
+        <button class="finish-btn">Selesai</button>
+      </div>
+    </div>
+
+    <div class="quiz-right">
+      <div class="numbers">
+        
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>10</button>
+        <button>11</button>
+        <button>12</button>
+        <button>13</button>
+        <button>14</button>
+        <button>15</button>
+        <button>16</button>
+        <button>17</button>
+        <button>18</button>
+        <button>19</button>
+        <button class="active">20</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+
+  document.querySelectorAll(".option").forEach(option => {
+    option.addEventListener("click", function() {
+      document.querySelectorAll(".option").forEach(btn => btn.classList.remove("selected"));
+      this.classList.add("selected");
+    });
+  });
+
+ 
+  document.querySelector(".finish-btn").addEventListener("click", function() {
+    if (!document.querySelector(".option.selected")) {
+      alert("Silakan pilih jawaban terlebih dahulu!");
+      return;
+    }
+    window.location.href = "hasil.html"; 
+  });
+</script>
+
+</body>
+</html>
