@@ -292,6 +292,12 @@ body {
   background-color: #d1d1d1;
 }
 
+.quiz-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+
 .quiz-right {
     flex: 1;
     display: flex;
