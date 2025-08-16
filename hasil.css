@@ -1,102 +1,107 @@
 .hasil-container {
-  padding: 40px;
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-family: inherit; 
 }
 
-.hasil-container h2 {
+.hasil-header h2 {
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
   text-align: center;
-  margin-bottom: 40px;
-  font-weight: 700;
-  color: #500a8d;
 }
 
-/* Flex pakai Grid */
 .hasil-flex {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
-/* Ilustrasi kiri */
 .hasil-left {
+  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-start; 
 }
 
 .hasil-left img {
-  max-width: 100%;
+  width: 90%;
+  max-width: 350px;
   border-radius: 12px;
 }
 
-/* Info kanan */
-.hasil-info h3 {
-  margin-top: 20px;
-  color: #500a8d;
+.hasil-right {
+  flex: 2;
 }
 
-.progress-group {
-  margin: 10px 0;
+.hasil-right h3 {
+  font-size: 22px;
+  margin: 20px 0 10px;
+  color: #333;
+}
+
+.progress-item {
+  margin-bottom: 15px;
+}
+
+.progress-label {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .progress-bar {
-  flex: 1;
-  background: #eee;
-  border-radius: 8px;
+  background: #f0f0f0;
+  border-radius: 20px;
   overflow: hidden;
-  height: 12px;
+  height: 14px;
 }
 
-.progress-bar div {
-  height: 12px;
-  background: #500a8d;
-}
-
-.highlight {
-  color: #500a8d;
-  font-weight: 700;
-}
-
-/* Rekomendasi (full bawah) */
-.hasil-rekomendasi {
-  grid-column: 1 / span 2; /* full width */
-  margin-top: 30px;
-}
-
-.hasil-rekomendasi h3 {
-  margin-bottom: 20px;
-  color: #500a8d;
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ffb300, #ff9800);
+  transition: width 0.4s ease;
 }
 
 .role-card {
-  background: #fff;
-  padding: 20px;
+  border: 1px solid #eee;
+  padding: 18px;
+  margin: 20px 0;
   border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-  margin-bottom: 20px;
+  background: #fafafa;
+  transition: transform 0.2s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .role-card h4 {
-  margin: 0 0 10px;
-  color: #500a8d;
+  margin-bottom: 8px;
+  color: #222;
+  font-size: 18px;
 }
 
 .back-home {
   display: inline-block;
   margin-top: 20px;
-  padding: 12px 24px;
+  padding: 12px 22px;
+  border-radius: 10px;
   background: #500a8d;
   color: #fff;
   text-decoration: none;
-  border-radius: 8px;
   font-weight: 600;
-  transition: 0.2s;
+  transition: background 0.3s ease;
 }
 
 .back-home:hover {
-  background: #3a076a;
+  background: #500a8d;
 }
