@@ -1,98 +1,147 @@
-.hasil-container {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  font-family: inherit; 
-}
-
-.hasil-header h2 {
-  margin-bottom: 24px;
-  font-size: 28px;
-  font-weight: bold;
-  color: #500a8d;
-  text-align: center;
-}
-
-.hasil-flex {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.hasil-left {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hasil-left img {
-  width: 90%;
-  max-width: 350px;
-  border-radius: 12px;
-}
-
-.hasil-right {
-  flex: 2;
-}
-
-.hasil-right h3 {
-  font-size: 22px;
-  margin: 20px 0 10px;
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
   color: #333;
 }
 
-.progress-item {
-  margin-bottom: 15px;
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-.progress-label {
+.container h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.card .intro {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.card .intro strong {
+  color: #500a8d;
+}
+
+.skills {
+  margin-top: 20px;
+}
+
+.skills h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.skill {
+  margin: 10px 0;
+}
+
+.skill-name {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 6px;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
 .progress-bar {
-  background: #f0f0f0;
-  border-radius: 20px;
+  background: #eee;
+  border-radius: 8px;
   overflow: hidden;
-  height: 14px;
+  height: 12px;
 }
 
-.progress-fill {
+.progress {
+  background: #500a8d; /* ungu */
   height: 100%;
-  background: linear-gradient(90deg, #ffb300, #ff9800);
   transition: width 0.4s ease;
 }
 
-.role-card {
-  border: 1px solid #eee;
-  padding: 18px;
-  margin: 20px 0;
+/* === Card Roadmap Belajar === */
+.roadmap {
+  margin-top: 30px;
+}
+
+.roadmap h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.course-card {
+  background: #fff;
   border-radius: 12px;
-  background: #500a8d;
-  transition: transform 0.2s ease;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-.role-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.role-card h4 {
-  margin-bottom: 8px;
+.course-card h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
   color: #500a8d;
-  font-size: 18px;
 }
 
+.course-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.course-card a {
+  display: inline-block;
+  background: #500a8d;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.course-card a:hover {
+  background: #370666;
+}
+
+/* === Gaya Belajar & Lingkungan === */
+.learning-style {
+  margin-top: 30px;
+}
+
+.learning-style h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.learning-style p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* === Tombol Kembali (Selesai) === */
 .back-home {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 25px;
   padding: 12px 22px;
   border-radius: 10px;
   background: #500a8d;
@@ -103,5 +152,5 @@
 }
 
 .back-home:hover {
-  background: #0056b3;
+  background: #370666;
 }
