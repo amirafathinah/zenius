@@ -302,7 +302,6 @@ body {
   align-items: flex-start;
 }
 
- <!-- Tombol
 .quiz-right {
     flex: 1;
     display: flex;
@@ -312,7 +311,7 @@ body {
     margin-left: 40px;
     margin-top: 20px;
 } 
--->
+
 
 .numbers {
     display: grid;
@@ -335,15 +334,17 @@ body {
 
 .next-btn, .prev-btn {
   display: inline-block;
+  width: 120px;       
+  text-align: center;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 0;    
   margin-top: 15px;
   margin-right: 10px;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
-  text-align: center;
+  font-size: 14px;
 }
 
 .next-btn {
