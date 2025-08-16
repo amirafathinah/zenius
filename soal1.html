@@ -82,41 +82,34 @@
 </main>
 
 <script>
-  const options = document.querySelectorAll(".option");
-  const progressFill = document.getElementById("progressFill");
-  const progressText = document.getElementById("progressText");
-  const nextBtn = document.getElementById("nextBtn");
-  const num1 = document.getElementById("num1");
+    let progress = parseInt(localStorage.getItem("progress")) || 0;
+    let answered = JSON.parse(localStorage.getItem("answered")) || [];
 
-  options.forEach(option => {
-    option.addEventListener("click", () => {
-        
-      options.forEach(btn => btn.classList.remove("selected"));
-      option.classList.add("selected");
+    document.getElementById("progressFill").style.width = progress + "%";
+    document.getElementById("progressText").textContent = progress + "%";
 
-      localStorage.setItem("progress", 5);
-      localStorage.setItem("answered1", "true");
-
-      progressFill.style.width = "5%";
-      progressText.textContent = "5%";
-
-      nextBtn.style.pointerEvents = "auto";
-      nextBtn.style.opacity = "1";
-
-      num1.classList.add("answered");
+    answered.forEach(num => {
+      document.querySelectorAll(".quiz-right .num")[num-1]?.classList.add("answered");
     });
-  });
 
-  let savedProgress = localStorage.getItem("progress") || 0;
-  progressFill.style.width = savedProgress + "%";
-  progressText.textContent = savedProgress + "%";
+    document.querySelectorAll(".option").forEach(option => {
+      option.addEventListener("click", function() {
+        document.querySelectorAll(".option").forEach(btn => btn.classList.remove("selected"));
+        this.classList.add("selected");
 
-  if(localStorage.getItem("answered1")){
-    num1.classList.add("answered");
-    nextBtn.style.pointerEvents = "auto";
-    nextBtn.style.opacity = "1";
-  }
-</script>
+        let currentSoal = 1;
+        if (!answered.includes(currentSoal)) {
+          progress += 5;
+          answered.push(currentSoal);
+          localStorage.setItem("progress", progress);
+          localStorage.setItem("answered", JSON.stringify(answered));
+        }
 
+        document.getElementById("progressFill").style.width = progress + "%";
+        document.getElementById("progressText").textContent = progress + "%";
+        document.querySelectorAll(".quiz-right .num")[currentSoal-1].classList.add("answered");
+      });
+    });
+  </script>
 </body>
 </html>
