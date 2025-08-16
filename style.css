@@ -322,13 +322,14 @@ body {
 .next-btn {
   background-color: #800080;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   display: block;
-  margin-left: auto;
-  margin-top: 20px;
+  margin-left: auto;   
+  margin-top: 25px;
+  font-weight: 600;
 }
 
 .next-btn:hover {
