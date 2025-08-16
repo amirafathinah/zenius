@@ -245,7 +245,7 @@ body {
   text-align: center;
 }
 
-.options {
+.option {
   background-color: #e5e5e5;   
   border-radius: 8px;
   padding: 12px;
@@ -254,7 +254,7 @@ body {
   transition: background 0.3s ease;
 }
 
-.options:hover {
+.option:hover {
   background-color: #d1d1d1;  
 }
 
