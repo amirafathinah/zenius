@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root{
-  --purple: #7c3aed;
+  --purple: #500a8d;
   --muted: #f7f7f7;
   --border: #e6e6e6;
   --text: #222;
@@ -118,7 +118,7 @@ body { font-family: "Poppins", sans-serif; color: var(--text); }
 }
 .step-info p{ color:#333; line-height:1.6; }
 
-.step:nth-child(even) .step-card { /* optional: alternate layout if needed */ }
+.step:nth-child(even) .step-card 
 
 @media (max-width: 900px){
   .roadmap::before{ display:none; }
