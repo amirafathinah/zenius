@@ -1,3 +1,11 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+button, .btn-learn {
+  font-family: 'Poppins', sans-serif;
+}
+
 .title-section {
   text-align: center;
   margin: 25px 0 15px; 
