@@ -1,0 +1,126 @@
+.title-section {
+  text-align: center;
+  margin: 30px 0 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.title-section h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+}
+
+.title-section p {
+  font-size: 16px;
+  color: #555;
+  margin-top: 6px;
+}
+
+/* ====== INFODATA (HEADER) ====== */
+.infodata {
+  background: linear-gradient(135deg, #ffd60a, #ffc300);
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.infodata h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.infodata p {
+  font-size: 18px;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ====== CARD GRID ====== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 20px 40px 50px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  align-items: stretch;
+  font-family: 'Poppins', sans-serif;
+}
+
+.career-card {
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.career-card img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.career-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.career-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.btn-learn {
+  background: #ffd60a;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background 0.18s;
+  align-self: flex-start;
+}
+
+.btn-learn:hover {
+  background: #e0b800;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 1000px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+  .career-card img {
+    width: 100px;
+    margin: 0 auto 12px;
+  }
+  .career-card {
+    text-align: center;
+    align-items: center;
+  }
+  .btn-learn {
+    align-self: center;
+    width: 100%;
+  }
+}
