@@ -68,8 +68,20 @@ body { font-family: "Poppins", sans-serif; color: var(--text); }
   padding: 18px;
   max-width: 480px;
   box-shadow: none;
+  transition: 0.3s;
+  cursor: pointer;
 }
-.step-card small{ color: var(--purple); font-weight:600; }
+
+.step-card:hover {
+  background-color: #f9f9f9;
+  transform: scale(1.02);
+}
+
+.step-card small { 
+  color: var(--purple); 
+  font-weight:600; 
+}
+
 .step-card h2{ font-size: 1.05rem; margin: 8px 0; font-weight:700; }
 .step-card .meta{ color:#666; font-size:0.9rem; margin-top:8px; }
 
