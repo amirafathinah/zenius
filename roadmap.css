@@ -1,126 +1,131 @@
-.title-section {
-  text-align: center;
-  margin: 30px 0 10px;
-  font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+  --purple: #7c3aed;
+  --muted: #f7f7f7;
+  --border: #e6e6e6;
+  --text: #222;
 }
 
-.title-section h1 {
-  font-size: 30px;
+body { font-family: "Poppins", sans-serif; color: var(--text); }
+
+.infodata{
+  max-width: 1100px;
+  margin: 28px auto 18px;
+  padding: 0 24px 8px;
+  text-align: left;
+}
+.infodata h1{
+  font-size: 28px;
   font-weight: 700;
-  color: #000;
+  margin-bottom: 8px;
+}
+.infodata .breadcrumb{
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+.infodata .desc{
+  color: #333;
+  margin-bottom: 12px;
+  max-width: 900px;
+}
+.infodata-list { margin-left: 18px; color:#333; margin-bottom:8px; }
+.infodata .note { color:#666; font-size:0.95rem; }
+
+.roadmap{
+  max-width: 1100px;
+  margin: 20px auto 80px;
+  position: relative;
+  padding: 0 24px;
 }
 
-.title-section p {
-  font-size: 16px;
-  color: #555;
+.roadmap::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 24px;
+  width: 4px;
+  background: var(--purple);
+  border-radius: 4px;
+}
+
+.step{
+  display: grid;
+  grid-template-columns: 1fr 96px 1fr;
+  gap: 16px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.step-card{
+  grid-column: 1;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px;
+  max-width: 480px;
+  box-shadow: none;
+}
+.step-card small{ color: var(--purple); font-weight:600; }
+.step-card h2{ font-size: 1.05rem; margin: 8px 0; font-weight:700; }
+.step-card .meta{ color:#666; font-size:0.9rem; margin-top:8px; }
+
+.step-marker{
+  grid-column: 2;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+}
+.step-marker .circle{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background: #fff;
+  border: 3px solid var(--purple);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--purple);
+  font-weight:700;
+  position: relative;
   margin-top: 6px;
 }
 
-/* ====== INFODATA (HEADER) ====== */
-.infodata {
-  background: linear-gradient(135deg, #ffd60a, #ffc300);
-  padding: 40px 20px;
-  text-align: center;
-  border-radius: 0 0 20px 20px;
-  font-family: 'Poppins', sans-serif;
+.step-marker .circle::after{
+  content:"";
+  position:absolute;
+  bottom:-10px;
+  left:50%;
+  transform:translateX(-50%);
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background: var(--purple);
 }
 
-.infodata h1 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 12px;
+.step-info{
+  grid-column: 3;
+  padding-left: 6px;
 }
-
-.infodata p {
-  font-size: 18px;
-  color: #333;
-  max-width: 700px;
-  margin: 0 auto;
+.step-info h4{ color: var(--purple); font-size:1rem; font-weight:700; margin-bottom:6px; }
+.step-info blockquote{
+  margin:0 0 10px;
+  font-style:italic;
+  color:#333;
 }
+.step-info p{ color:#333; line-height:1.6; }
 
-/* ====== CARD GRID ====== */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  padding: 20px 40px 50px;
-  max-width: 1200px;
-  margin: 0 auto 60px;
-  align-items: stretch;
-  font-family: 'Poppins', sans-serif;
-}
+.step:nth-child(even) .step-card { /* optional: alternate layout if needed */ }
 
-.career-card {
-  background: #f5f5f5;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.career-card img {
-  width: 120px;
-  height: auto;
-  margin-bottom: 8px;
-  display: block;
-}
-
-.career-card h3 {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 8px 0;
-}
-
-.career-card p {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 12px;
-  line-height: 1.4;
-}
-
-.btn-learn {
-  background: #ffd60a;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 12px;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  cursor: pointer;
-  transition: background 0.18s;
-  align-self: flex-start;
-}
-
-.btn-learn:hover {
-  background: #e0b800;
-}
-
-/* ====== RESPONSIVE ====== */
-@media (max-width: 1000px) {
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .card-grid {
+@media (max-width: 900px){
+  .roadmap::before{ display:none; }
+  .step{
     grid-template-columns: 1fr;
-    padding: 16px;
   }
-  .career-card img {
-    width: 100px;
-    margin: 0 auto 12px;
-  }
-  .career-card {
-    text-align: center;
-    align-items: center;
-  }
-  .btn-learn {
-    align-self: center;
-    width: 100%;
-  }
+  .step-marker{ display:none; }
+  .step-card{ max-width: 100%; }
+  .step-info{ padding-left:0; margin-top:12px; }
 }
