@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Zenius Progress</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="progress.css">
 </head>
   
@@ -63,13 +64,47 @@
           </li>
         </ul>
       </div>
+
+      <div id="completed" class="tab-content hidden">
+        <div class="progress-card">
+          <div class="progress-card-title">Kelas yang Diselesaikan</div>
+
+          <div class="empty-state">
+            <p>Anda belum memiliki kelas yang diselesaikan</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <script>
-    document.querySelectorAll('.progress-item').forEach(function(el){
-      el.addEventListener('keydown', function(e){
-        if(e.key === 'Enter' || e.key === ' ') el.click();
+    document.querySelectorAll('.tab').forEach(btn=>{
+      btn.addEventListener('click', function(){
+      
+        document.querySelectorAll('.tab').forEach(t=>{
+          t.classList.remove('active');
+          t.setAttribute('aria-selected','false');
+        });
+  
+        document.querySelectorAll('.tab-content').forEach(c=> c.classList.add('hidden'));
+
+        this.classList.add('active');
+        this.setAttribute('aria-selected','true');
+        const target = this.dataset.target;
+        document.getElementById(target).classList.remove('hidden');
+      });
+    });
+
+    const tabs = Array.from(document.querySelectorAll('.tab'));
+    tabs.forEach((tab, idx) => {
+      tab.addEventListener('keydown', e=>{
+        if(e.key === 'ArrowRight') {
+          const next = tabs[(idx+1) % tabs.length];
+          next.focus(); next.click();
+        } else if(e.key === 'ArrowLeft') {
+          const prev = tabs[(idx-1 + tabs.length) % tabs.length];
+          prev.focus(); prev.click();
+        }
       });
     });
   </script>
