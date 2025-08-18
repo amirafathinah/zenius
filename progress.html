@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zenius Progress</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="progress.css">
+</head>
+  
+<body>
+  <nav class="navbar">
+    <div class="navbar-top">
+      <div class="logo">
+        <img src="zenius.main.png" alt="Zenius Logo">
+      </div>
+
+      <div class="auth-buttons">
+        <button class="sign-in">Sign In</button>
+        <a class="subscribe-btn" href="https://www.youtube.com/@ZeniusEducation" target="_blank">Subscribe</a>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tesminat.html">Tes Minat & Bakat</a></li>
+      <li><a href="langkahbelajar.html">Langkah Belajar</a></li>
+      <li><a href="progress.html" class="active">Zenius Progress</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+    <header class="page-header">
+      <h1>Zenius Progress</h1>
+
+      <div class="tabs">
+        <button class="tab active">Kelas yang Dipelajari</button>
+        <button class="tab">Kelas yang Diselesaikan</button>
+      </div>
+    </header>
+
+    <section class="progress-area">
+      <div class="progress-card">
+        <div class="progress-card-title">Lanjutkan Belajar Anda</div>
+
+        <ul class="progress-list">
+          <li class="progress-item" tabindex="0" role="link" onclick="location.href='roadmapdata.html'">
+            <div class="item-left">
+          
+              <svg class="back-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#111" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+              </svg>
+
+              <div class="item-text">
+                <div class="item-title">Kenalan dengan Dunia Data dan Berpikir Logis</div>
+                <div class="item-meta">44 Modul Belajar • 5.801 Siswa Terdaftar</div>
+              </div>
+            </div>
+
+            <div class="item-right">
+              <a href="koridor-kelas.html" class="btn-corridor">Koridor Kelas</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll('.progress-item').forEach(function(el){
+      el.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' ') el.click();
+      });
+    });
+  </script>
+</body>
+</html>
