@@ -3,19 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Zenius Progress</title>
+  <title>Zenius Progress — Dipelajari</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="progress.css">
 </head>
-  
 <body>
+  <!-- NAV -->
   <nav class="navbar">
     <div class="navbar-top">
-      <div class="logo">
-        <img src="zenius.main.png" alt="Zenius Logo">
-      </div>
-
+      <div class="logo"><img src="zenius.main.png" alt="Zenius Logo"></div>
       <div class="auth-buttons">
         <button class="sign-in">Sign In</button>
         <a class="subscribe-btn" href="https://www.youtube.com/@ZeniusEducation" target="_blank">Subscribe</a>
@@ -33,10 +29,9 @@
   <main class="page">
     <header class="page-header">
       <h1>Zenius Progress</h1>
-
       <div class="tabs">
-        <button class="tab active">Kelas yang Dipelajari</button>
-        <button class="tab">Kelas yang Diselesaikan</button>
+        <a class="tab active" href="progress.html">Kelas yang Dipelajari</a>
+        <a class="tab" href="progressdone.html">Kelas yang Diselesaikan</a>
       </div>
     </header>
 
@@ -45,68 +40,31 @@
         <div class="progress-card-title">Lanjutkan Belajar Anda</div>
 
         <ul class="progress-list">
-          <li class="progress-item" tabindex="0" role="link" onclick="location.href='roadmapdata.html'">
-            <div class="item-left">
-          
-              <svg class="back-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="#111" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-              </svg>
+          <!-- item: link mengarah ke roadmapdata.html -->
+          <li>
+            <a class="progress-item" href="roadmapdata.html">
+              <div class="item-left">
+                <!-- arrow icon -->
+                <svg class="back-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#111" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
 
-              <div class="item-text">
-                <div class="item-title">Kenalan dengan Dunia Data dan Berpikir Logis</div>
-                <div class="item-meta">44 Modul Belajar • 5.801 Siswa Terdaftar</div>
+                <div class="item-text">
+                  <div class="item-title">Kenalan dengan Dunia Data dan Berpikir Logis</div>
+                  <div class="item-meta">44 Modul Belajar • 5.801 Siswa Terdaftar</div>
+                </div>
               </div>
-            </div>
 
-            <div class="item-right">
-              <a href="koridor-kelas.html" class="btn-corridor">Koridor Kelas</a>
-            </div>
+              <div class="item-right">
+                <a class="btn-corridor" href="koridor-kelas.html">Koridor Kelas</a>
+              </div>
+            </a>
           </li>
+
+    
         </ul>
-      </div>
-
-      <div id="completed" class="tab-content hidden">
-        <div class="progress-card">
-          <div class="progress-card-title">Kelas yang Diselesaikan</div>
-
-          <div class="empty-state">
-            <p>Anda belum memiliki kelas yang diselesaikan</p>
-          </div>
-        </div>
       </div>
     </section>
   </main>
-
-  <script>
-    document.querySelectorAll('.tab').forEach(btn=>{
-      btn.addEventListener('click', function(){
-      
-        document.querySelectorAll('.tab').forEach(t=>{
-          t.classList.remove('active');
-          t.setAttribute('aria-selected','false');
-        });
-  
-        document.querySelectorAll('.tab-content').forEach(c=> c.classList.add('hidden'));
-
-        this.classList.add('active');
-        this.setAttribute('aria-selected','true');
-        const target = this.dataset.target;
-        document.getElementById(target).classList.remove('hidden');
-      });
-    });
-
-    const tabs = Array.from(document.querySelectorAll('.tab'));
-    tabs.forEach((tab, idx) => {
-      tab.addEventListener('keydown', e=>{
-        if(e.key === 'ArrowRight') {
-          const next = tabs[(idx+1) % tabs.length];
-          next.focus(); next.click();
-        } else if(e.key === 'ArrowLeft') {
-          const prev = tabs[(idx-1 + tabs.length) % tabs.length];
-          prev.focus(); prev.click();
-        }
-      });
-    });
-  </script>
 </body>
 </html>
