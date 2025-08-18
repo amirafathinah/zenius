@@ -21,13 +21,6 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 
-/* NAVBAR */
-.navbar { box-shadow: 0 2px 0 var(--shadow); }
-.navbar-top { background: var(--yellow); padding: 12px 24px; display:flex; align-items:center; justify-content:space-between; }
-.logo img { height:40px; display:block; }
-.nav-links{ list-style:none; display:flex; justify-content:center; gap:28px; margin:0; padding:10px 0; border-top:1px solid #ddd; }
-.nav-links a{ text-decoration:none; color:#111; font-weight:500; font-size:15px; }
-.auth-buttons .subscribe-btn{ background:#fff; padding:8px 14px; border-radius:8px; color:#111; text-decoration:none; box-shadow:0 6px 14px rgba(0,0,0,0.08); font-weight:700; }
 
 /* PAGE layout */
 .page { max-width: 1100px; margin: 28px auto; padding: 0 20px 60px; }
