@@ -86,54 +86,44 @@
 </main>
 
 <script>
-
 (function(){
   const TOTAL = 20;
   const STORAGE_KEY = 'zenius_answered';
 
-  function getCurrentQuestion() {
-    const activeBtn = document.querySelector('.numbers button.active');
-    if(activeBtn) {
-      const n = parseInt(activeBtn.textContent, 10);
-      if(!isNaN(n)) return n;
-    }
+  function getCurrentQuestion(){
     const m = window.location.pathname.match(/soal(\d+)\.html$/i);
-    if(m) return parseInt(m[1], 10);
-    return 1;
+    if(m) return parseInt(m[1],10);
+    
+    const a = document.querySelector('.numbers button.active');
+    return a ? parseInt(a.textContent,10) : 1;
   }
 
   function loadAnsweredSet(){
-    try {
+    try{
       const raw = localStorage.getItem(STORAGE_KEY);
       if(!raw) return new Set();
       const arr = JSON.parse(raw);
       if(!Array.isArray(arr)) return new Set();
-      return new Set(arr.map(x => parseInt(x,10)).filter(n => !isNaN(n)));
-    } catch(e){
-      return new Set();
-    }
+      return new Set(arr.map(x=>parseInt(x,10)).filter(n=>!isNaN(n)));
+    }catch(e){ return new Set(); }
   }
 
   function saveAnsweredSet(set){
-    const arr = Array.from(set).sort((a,b)=>a-b);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(set).sort((a,b)=>a-b)));
   }
 
   function updateNumbersUI(answeredSet, current){
-    const btns = document.querySelectorAll('.numbers button');
-    btns.forEach((btn, idx) => {
-      const n = idx + 1;
-      btn.classList.remove('answered','active');
-      if(answeredSet.has(n)) btn.classList.add('answered');
-      if(n === current) btn.classList.add('active');
+    document.querySelectorAll('.numbers button').forEach((btn, idx)=>{
+      const n = idx+1;
+      btn.classList.toggle('answered', answeredSet.has(n));
+      btn.classList.toggle('active', n === current);
     });
   }
 
   function updateProgressUI(answeredSet){
     const fill = document.getElementById('progressFill');
     const text = document.getElementById('progressText');
-    const answeredCount = answeredSet.size;
-    const pct = Math.round((answeredCount / TOTAL) * 100);
+    const pct = Math.round((answeredSet.size / TOTAL) * 100);
     if(fill) fill.style.width = pct + '%';
     if(text) text.textContent = pct + '%';
   }
@@ -144,10 +134,10 @@
   updateNumbersUI(answeredSet, current);
   updateProgressUI(answeredSet);
 
-  document.querySelectorAll('.option').forEach(opt=>{
-    opt.addEventListener('click', function(){
-    
-      document.querySelectorAll('.option').forEach(b => b.classList.remove('selected'));
+
+  document.querySelectorAll('.option').forEach(btn=>{
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.option').forEach(x=>x.classList.remove('selected'));
       this.classList.add('selected');
 
       answeredSet.add(current);
@@ -158,45 +148,28 @@
     });
   });
 
-  
-  document.querySelectorAll('.numbers button').forEach((btn, idx) => {
-    const n = idx + 1;
-    btn.addEventListener('click', function(){
-     
+  document.querySelectorAll('.numbers button').forEach((btn, idx)=>{
+    const n = idx+1;
+    btn.addEventListener('click', ()=> {
       if(n === current) return;
-    
       window.location.href = `soal${n}.html`;
     });
   });
 
-  const prevLink = document.getElementById('prevLink');
-  if(prevLink){
-    if(current <= 1){
-      prevLink.classList.add('disabled');
-      prevLink.removeAttribute('href');
-      prevLink.style.pointerEvents = 'none';
-      prevLink.style.opacity = '.6';
-    } else {
-      prevLink.setAttribute('href', `soal${current-1}.html`);
-    }
-  }
-
   const finishBtn = document.getElementById('finishBtn');
   if(finishBtn){
-    finishBtn.addEventListener('click', function(){
+    finishBtn.addEventListener('click', ()=>{
       if(!answeredSet.has(current)){
-        alert("Silakan pilih jawaban terlebih dahulu!");
+        alert('Silakan pilih jawaban terlebih dahulu!');
         return;
       }
-
       window.location.href = 'hasil.html';
     });
   }
 
-  updateProgressUI(answeredSet);
-
 })();
 </script>
+
 
 </body>
 </html>
