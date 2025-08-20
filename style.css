@@ -253,6 +253,8 @@ body {
 }
 
 #progressText {
+  min-width: 40px;
+  font-weight: 700;
   font-weight: bold;
 }
 
@@ -320,17 +322,20 @@ body {
 }
 
 .numbers button {
-    background: #e5e5e5;
-    border: none;
-    border-radius: 4px;
-    padding: 10px;
-    cursor: pointer;
+  background: #e5e5e5;
+  border: none;
+  border-radius: 6px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-weight: 600;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
 }
 
-.numbers button.active {
-    background: black;
-    color: white;
-}
+.numbers button.active { background:#000; color:#fff; }
+.numbers button.answered { background:#6a0dad; color:#fff; }
 
 .next-btn, .prev-btn {
   display: inline-block;
@@ -359,7 +364,7 @@ body {
 .prev-btn {
   background-color: #ccc;
   color: #666;
-  cursor: not-allowed;
+  cursor: pointer;
 }
 
 .prev-btn.active {
