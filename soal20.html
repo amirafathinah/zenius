@@ -52,8 +52,8 @@
       </div>
 
       <div class="navigation-btns" style="margin-top:18px;">
-        <!-- prev akan di-set dinamis lewat JS -->
-        <a id="prevLink" class="prev-btn" href="#">Previous</a>
+    
+        <a href="soal2.html" class="prev-btn active">Previous</a>
         <button id="finishBtn" class="finish-btn">Selesai</button>
       </div>
     </div>
@@ -91,7 +91,6 @@
   const TOTAL = 20;
   const STORAGE_KEY = 'zenius_answered';
 
-  // ambil current question: dari tombol .active (jika ada) atau dari nama file soalN.html
   function getCurrentQuestion() {
     const activeBtn = document.querySelector('.numbers button.active');
     if(activeBtn) {
