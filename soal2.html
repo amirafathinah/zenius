@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Tes Minat & Bakat - Soal 2</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <nav class="navbar">
   <div class="navbar-top">
     <div class="logo">
@@ -15,32 +14,33 @@
     </div>
     <div class="auth-buttons">
       <button class="sign-in">Sign In</button>
-      <a href="https://www.youtube.com/@ZeniusEducation" class="subscribe-btn" target="_blank">
-        Subscribe
-      </a>
+      <a href="https://www.youtube.com/@ZeniusEducation" class="subscribe-btn" target="_blank">Subscribe</a>
     </div>
   </div>
+
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="tesminat.html" class="active">Tes Minat & Bakat</a></li>
-    <li><a href="#">Langkah Belajar</a></li>
-    <li><a href="#">Zenius Progress</a></li>
+    <li><a href="langkahbelajar.html">Langkah Belajar</a></li>
+    <li><a href="progress.html">Zenius Progress</a></li>
   </ul>
 </nav>
 
 <main class="soal-container">
   <h2>Tes Minat & Bakat</h2>
-  <div class="progress-container">
-    <div class="progress-bar">
-      <div id="progressFill" class="progress-fill" style="width: 10%;"></div>
+
+ 
+  <div class="progress-container" style="align-items:center;">
+    <div id="progressBar" class="progress-bar" style="flex:1;">
+      <div id="progressFill" class="progress-fill" style="width:5%;"></div>
     </div>
-    <span id="progressText">10%</span>
+    <div id="progressText" style="min-width:40px; text-align:right; font-weight:700;">5%</div>
   </div>
 
   <div class="soal-content">
     <div class="soal-left">
       <h3>Pertanyaan 2</h3>
-      <p>Saya menikmati memecahkan masalah logika atau angka/</p>
+      <p>Saya menikmati memecahkan masalah logika atau angka.</p>
 
       <div class="options">
         <button class="option">Sangat Setuju</button>
@@ -49,26 +49,34 @@
         <button class="option">Tidak Setuju</button>
         <button class="option">Sangat Tidak Setuju</button>
       </div>
-      <a href="soal20.html"><button class="next-btn">Next</button></a>
+
+      <div style="margin-top:16px;">
+        <a href="soal1.html" class="prev-btn">Previous</a>
+        <a href="soal3.html" class="next-btn">Next</a>
+      </div>
     </div>
 
     <div class="quiz-right">
-      <div class="numbers">
-        <button>1</button>
-        <button class="active">2</button>
+      <div class="numbers" aria-label="Nomor soal">
+        <!-- tandai jawaban / aktif sesuai state -->
+        <button class="answered" aria-label="Soal 1 (terjawab)">1</button>
+        <button class="active" aria-current="true" aria-label="Soal 2 (sedang)">2</button>
         <button>3</button>
         <button>4</button>
         <button>5</button>
+
         <button>6</button>
         <button>7</button>
         <button>8</button>
         <button>9</button>
         <button>10</button>
+
         <button>11</button>
         <button>12</button>
         <button>13</button>
         <button>14</button>
         <button>15</button>
+
         <button>16</button>
         <button>17</button>
         <button>18</button>
@@ -80,7 +88,8 @@
 </main>
 
 <script>
-   const targetProgress = 10; 
+
+  const targetProgress = 5; 
 
   document.querySelectorAll(".option").forEach(option => {
     option.addEventListener("click", function() {
@@ -91,7 +100,24 @@
       document.getElementById("progressText").textContent = targetProgress + "%";
     });
   });
-</script>
 
+ 
+  document.querySelectorAll('.numbers button').forEach((btn, idx) => {
+    btn.addEventListener('click', () => {
+      const num = idx + 1;
+    
+      const target = `soal${num}.html`;
+   
+      window.location.href = target;
+    });
+  });
+
+  document.querySelectorAll('.option').forEach((el, i) => {
+    el.setAttribute('tabindex','0');
+    el.addEventListener('keydown', e => {
+      if(e.key === 'Enter' || e.key === ' ') el.click();
+    });
+  });
+</script>
 </body>
 </html>
