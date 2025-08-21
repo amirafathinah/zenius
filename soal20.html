@@ -54,7 +54,7 @@
       <div class="navigation-btns" style="margin-top:18px;">
     
         <a href="soal2.html" class="prev-btn active">Previous</a>
-        <button id="finishBtn" class="finish-btn">Selesai</button>
+        <a href="hasil.html" class="finish-btn">Finish</a>
       </div>
     </div>
 
@@ -72,13 +72,13 @@
         <button class="answered" aria-label="Soal 10 (terjawab)">10</button>
         <button class="answered" aria-label="Soal 11 (terjawab)">11</button>
         <button class="answered" aria-label="Soal 12 (terjawab)">12</button>
-        <button class="active">13</button>
-        <button class="active">14</button>
-        <button class="active">15</button>
-        <button class="active">16</button>
-        <button class="active">17</button>
-        <button class="active">18</button>
-        <button class="active">19</button>
+        <button class="answered" aria-label="Soal 13 (terjawab)">13</button>
+        <button class="answered" aria-label="Soal 14 (terjawab)">14</button>
+        <button class="answered" aria-label="Soal 15 (terjawab)">15</button>
+        <button class="answered" aria-label="Soal 16 (terjawab)">16</button>
+        <button class="answered" aria-label="Soal 17 (terjawab)">17</button>
+        <button class="answered" aria-label="Soal 18 (terjawab)">18</button>
+        <button class="answered" aria-label="Soal 19 (terjawab)">19</button>
         <button class="active">20</button>
       </div>
     </div>
@@ -134,15 +134,6 @@
     });
   });
 
- const finishBtn = document.getElementById('finishBtn');
-  if(finishBtn){
-    finishBtn.addEventListener('click', ()=>{
-      if(!answeredSet.has(current)){
-        alert('Silakan pilih jawaban terlebih dahulu!');
-        return;
-      }
-      window.location.href = 'hasil.html';
-    });
   }
 }
 )
